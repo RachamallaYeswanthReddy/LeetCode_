@@ -5,4 +5,3 @@ class Solution:
             if nums.count(i) > len(nums)//3:
                 elements.append(i)
         return elements
-            
