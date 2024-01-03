@@ -6,13 +6,9 @@ public:
         while (x != 0) {
             int digit = x % 10;
 
-            if (reversed > INT_MAX / 10 || (reversed == INT_MAX / 10 && digit > 7)) {
+            if (reversed > INT_MAX / 10 || reversed < INT_MIN / 10  ) {
                 return 0;
-            }
-            if (reversed < INT_MIN / 10 || (reversed == INT_MIN / 10 && digit < -8)) {
-                return 0;
-            }
-
+            } 
             reversed = reversed * 10 + digit;
             x = x / 10;
         }
